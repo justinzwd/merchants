@@ -12,7 +12,7 @@ public interface IMerchantsServ {
     //创建商户服务
     Response createMerchants(CreateMerchantsRequest request);
 
-    //根据id构造商户信息
+    //根据id构造商户信息 buildMerchantsInfoById
     Response buildMerchantsInfoById(Integer id);
 
     //投放优惠券
