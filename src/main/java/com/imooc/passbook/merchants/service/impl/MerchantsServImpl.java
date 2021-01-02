@@ -84,9 +84,9 @@ public class MerchantsServImpl implements IMerchantsServ {
         } else {
             String passTemplate = JSON.toJSONString(template);
             kafkaTemplate.send(
-                    Constants.TEMPLATE_TOPIC,
-                    Constants.TEMPLATE_TOPIC,
-                    passTemplate
+                    Constants.TEMPLATE_TOPIC,   //String topic
+                    Constants.TEMPLATE_TOPIC,   //key
+                    passTemplate                //data
                     );
             log.info("DropPassTemplate: {}",passTemplate);
         }
